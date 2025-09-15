@@ -1,1 +1,2 @@
-# kurur0s.github.io
+# kurur0s is also jyouji
+### Currently working on henkan
