@@ -1,3 +1,4 @@
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: pages-themes/midnight@v0.2.0
 title: Welcome!
+tagline: a site about an idle plot on my vast anxiety
 description: This are my repositories for personal projects and things that will live in the oblivious of my ADHD :)
