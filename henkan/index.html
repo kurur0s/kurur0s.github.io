@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henkan</title>
+    <title>Lyrics Romanizer</title>
+    <script>
+        function romanizeLyrics(lyrics) {
+            // Implement romanization logic here
+            // For demonstration, we'll just return the original lyrics
+            return lyrics;
+        }
+
+        function onSubmit() {
+            const lyricsInput = document.getElementById('lyrics').value;
+            const result = romanizeLyrics(lyricsInput);
+            document.getElementById('result').innerText = result;
+        }
+    </script>
 </head>
 <body>
-    <h1>Welcome to Henkan</h1>
-    <p>This is the content of the henkan project.</p>
-    <!-- Add more content as needed -->
+    <h1>Lyrics Romanizer</h1>
+    <textarea id="lyrics" rows="10" cols="50" placeholder="Enter lyrics here..."></textarea><br>
+    <button onclick="onSubmit()">Romanize</button>
+    <h2>Result</h2>
+    <div id="result"></div>
 </body>
 </html>
