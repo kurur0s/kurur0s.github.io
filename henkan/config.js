@@ -1,0 +1,3 @@
+const CONFIG = {
+  GENIUS_ACCESS_TOKEN: Z9QzEe66GLbhXBxti24zzgjZbyMnb6DrjhJbNqvKbK18QhJcosixIouOY770Af2r",
+};
