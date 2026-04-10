@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyrics Romanizer</title>
-    <script>
-        function romanizeLyrics(lyrics) {
-            // Implement romanization logic here
-            // For demonstration, we'll just return the original lyrics
-            return lyrics;
-        }
+￼<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Henkan Project</title>
 
-        function onSubmit() {
-            const lyricsInput = document.getElementById('lyrics').value;
-            const result = romanizeLyrics(lyricsInput);
-            document.getElementById('result').innerText = result;
-        }
-    </script>
-</head>
-<body>
-    <h1>Lyrics Romanizer</h1>
-    <textarea id="lyrics" rows="10" cols="50" placeholder="Enter lyrics here..."></textarea><br>
-    <button onclick="onSubmit()">Romanize</button>
-    <h2>Result</h2>
-    <div id="result"></div>
-</body>
-</html>
+  <!-- Kuroshiro + Kuromoji (client-side Japanese romanization) -->
+  <script src="https://cdn.jsdelivr.net/npm/kuroshiro@1.2.0/dist/kuroshiro.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/kuroshiro-analyzer-kuromoji@1.1.0/dist/kuroshiro-analyzer-kuromoji.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  ￼<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    ￼:root {
+      --bg:       #f7f5f0;
+      --surface:  #ffffff;
+      --border:   #e0ddd6;
+      --text:     #1a1916;
+      --muted:    #8a8780;
+      --accent:   #c8502a;
+      --accent2:  #2a6ec8;
+      --mono:     'DM Mono', monospace;
+      --serif:    'DM Serif Display', serif;
+      --radius:   6px;
+      --shadow:   0 1px 3px rgba(0,0,0,.07), 0 4px 16px rgba(0,0,0,.05);
+    }
+
+    ￼body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 14px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    ￼header {
+      padding: 2.5rem 2rem 1.5rem;
+      max-width: 760px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    ￼header h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 400;
+      letter-spacing: -.01em;
+      line-height: 1;
+    }
+
